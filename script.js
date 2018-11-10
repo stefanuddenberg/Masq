@@ -20,3 +20,21 @@ input.addEventListener "input", ->
   indicator.setAttribute "data-content", "Now hit enter!"
   
 balapaCop "Subscribe Form Interaction", "#999"
+
+
+/* Progress Bar */
+var progressBar = $('#progress-bar'),
+    width = 0;
+
+progressBar.width(width);
+
+var interval = setInterval(function() {
+
+    width += 10;
+
+    progressBar.css('width', width + '%');
+
+    if (width >= 100) {
+        clearInterval(interval);
+    }
+}, 1000);

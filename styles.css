@@ -18,6 +18,17 @@ body {
 }
 
 
+/* Code for progress bar */
+#progress-bar {
+    width: 0;
+	z-index: 1;
+    background: #f78;
+    text-align: center;
+    overflow: hidden;   
+}
+
+
+
 /* Code for Input Text Box */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
