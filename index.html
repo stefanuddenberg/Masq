@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="loading_spinner.css">
 	<link rel="stylesheet" href="styles.css">
-	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
 
 </head>
 
@@ -21,33 +22,58 @@
 		<div class="main-text row justify-content-center">
 			<div class="col-4"></div>
 			<div class="col-4">
-				<div class="main-text">	
-					<p><bold>Who do I want to be?</bold></p>
+				<div class="main-text">
+					<h1>
+						<bold>Masq me</bold>
+					</h1>
 				</div>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="col-6"></div>	
+
+		<div class="row button">
+			<div class="col-6"></div>
 			<div class="col-4">
-				<form class="ctr" action="#" method="#">
-					<div class="loader"></div>
-					<input type="text">
-					<div class="indicator" data-content="Type Your Identity"></div>
-				</form>
+				<button class="btn btn-lg btn-primary" onclick="masq()">Start</button>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-6"></div>	
+
+		<div class="row loading hidden">
+			<div class="col-6"></div>
 			<div class="col-4">
-				<div id="progressBar"></div>
+				<!-- <div id="progressBar"></div>-->
+				<h1>Loading...</h1>
+				<br>
+				<div class="lds-roller d-flex justify-content-center">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row error hidden">
+			<div class="col-6"></div>
+			<div class="col-4">
+				<h1>Error! Could not get data from server.</h1>				
+			</div>
+		</div>
+
+		<div class="row request hidden">
+			<div class="col-6"></div>
+			<div class="col-4">
+				<h1>BOILERPLATE</h1>
 			</div>
 		</div>
 
 
 		<div class="pic">
-			<img src="hacker_profile.jpg">
+			<img src="images/hacker_profile.jpg">
 		</div>
 	</div>
 	<script src="script.js"></script>
