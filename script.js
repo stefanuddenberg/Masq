@@ -61,8 +61,8 @@ function make_request() {
         async: true,
         cache: false,
         retries: 10,
-        url: 'server.py', // path to the script that will generate data
-        data: "boilerplate",
+        url: 'https://lipman.lib.id/add-profile-creator@0.0.1/', // path to the script that will generate data
+        data: $("#API-request"),
       })
       .done(function (data) {
         show_request(data);
@@ -73,7 +73,7 @@ function make_request() {
       .always(function () {
         $('.loading').hide();
       });
-  }, 3000);
+  }, 7000);
 }
 
 function show_request(data) {
